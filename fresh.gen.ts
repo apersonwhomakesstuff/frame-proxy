@@ -1,3 +1,4 @@
+// fresh.gen.ts
 import * as index from "./routes/index.tsx";
 import * as proxy from "./routes/api/proxy.ts";
 
