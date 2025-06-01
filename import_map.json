@@ -1,25 +1,26 @@
 {
   "imports": {
+    // Fresh’s own URLs
     "$fresh/": "https://deno.land/x/fresh@1.6.1/",
-    
-    // Alias preact inside fresh namespace
+    "$fresh/runtime.ts": "https://deno.land/x/fresh@1.6.1/runtime.ts",
+    "$fresh/src/": "https://deno.land/x/fresh@1.6.1/src/",
+
+    // Preact base + submodules (for your code and for Fresh internals)
     "preact": "https://esm.sh/preact@10.19.2",
     "preact/hooks": "https://esm.sh/preact@10.19.2/hooks",
     "preact/jsx-runtime": "https://esm.sh/preact@10.19.2/jsx-runtime",
     "preact-render-to-string": "https://esm.sh/preact-render-to-string@6.4.0",
 
-    // Fresh internal imports
-    "$fresh/runtime.ts": "https://deno.land/x/fresh@1.6.1/runtime.ts",
-    "$fresh/src/": "https://deno.land/x/fresh@1.6.1/src/",
-
-    // Remap fresh’s internal bare import to esm.sh
-    "https://deno.land/x/fresh@1.6.1/src/preact/hooks": "https://esm.sh/preact@10.19.2/hooks",
+    // Map Fresh’s internal references to “preact” → the esm.sh URLs
     "https://deno.land/x/fresh@1.6.1/src/preact": "https://esm.sh/preact@10.19.2",
+    "https://deno.land/x/fresh@1.6.1/src/preact/hooks": "https://esm.sh/preact@10.19.2/hooks",
     "https://deno.land/x/fresh@1.6.1/src/preact/jsx-runtime": "https://esm.sh/preact@10.19.2/jsx-runtime",
 
+    // (Optional) Signals if you use them
     "@preact/signals": "https://esm.sh/@preact/signals@1.2.1",
     "@preact/signals-core": "https://esm.sh/@preact/signals-core@1.2.1",
 
+    // Any other “bare” imports you use
     "std/": "https://deno.land/std@0.224.0/",
     "lodash": "https://esm.sh/lodash-es@4.17.21"
   }
